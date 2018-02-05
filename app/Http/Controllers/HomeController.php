@@ -63,22 +63,22 @@ class HomeController extends Controller
 //        $invite_response = Session::get('invite');
 //
 //        dd($invite_response);
-//        return redirect("/board/{$game_id}");
-          return redirect()->action('HomeController@invite',['game_id'=>$game_id]);
+        return redirect("/board/{$game_id}");
+          //return redirect()->action('HomeController@invite',['game_id'=>$game_id]);
     }
 
-    public function invite(Request $request,$game_id){
-
-        //Session::put('invite', 'Yes');
-        $path     = $request->path();
-        $response = str_after($path,'response=');
-        dd($response);
-        if($response == 'invite-ok'){
-            return redirect("/board/{$game_id}");
-        }
-        elseif ($response == 'invite-refused'){
-            return redirect()->back();
-        }
-
-    }
+//    public function invite(Request $request,$game_id){
+//
+//        //Session::put('invite', 'Yes');
+//        $path     = $request->path();
+//        $response = str_after($path,'response=');
+//        dd($response);
+//        if($response == 'invite-ok'){
+//            return redirect("/board/{$game_id}");
+//        }
+//        elseif ($response == 'invite-refused'){
+//            return redirect()->back();
+//        }
+//
+//    }
 }

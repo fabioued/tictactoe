@@ -10,8 +10,7 @@
                         <img class="img-circle img-responsive" src="https://www.gravatar.com/avatar/{{md5($user->email)}}?d=retro&s=200">
                     </div>
                     <div class="profile-info">
-                        <div class="profile-username">{{$user->name}}
-                            {{$user->id}}</div>
+                        <div class="profile-username">{{$user->name}}</div>
                         <div class="profile-score">Your Score:{{$user->score}}</div>
                     </div>
                 </div>
@@ -98,7 +97,7 @@
                 <p class="text-center"><span id="from"></span> invited you to a game</p>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger"  id="close-button"    type="button" data-dismiss="modal">Close</button>
+                {{--<button class="btn btn-danger"  id="close-button"    type="button" data-dismiss="modal">Close</button>--}}
                 <button class="btn btn-primary" id="play-button"     type="button">Play</button>
             </div>
         </div>
@@ -141,18 +140,18 @@
             }
         });
         $('#play-button').on('click', function(){
-            var action      = document.getElementById("new-game-form").action;
-            var ok_action   = action + '/response=invite-ok';
-            $('#new-game-form').attr('action', ok_action);
-            //alert(ok_action);
+//            var action      = document.getElementById("new-game-form").action;
+//            var ok_action   = action + '/response=invite-ok';
+//            $('#new-game-form').attr('action', ok_action);
+//            //alert(ok_action);
             $('#new-game-form').submit();
         });
-        $('#close-button').on('click', function(){
-            var action      = document.getElementById("new-game-form").action;
-            var new_action  = action + '/response=invite-refused';
-            $('#new-game-form').attr('action', new_action);
-            //alert(new_action);
-            $('#new-game-form').submit();
-        });
+//        $('#close-button').on('click', function(){
+//            var action      = document.getElementById("new-game-form").action;
+//            var new_action  = action + '/response=invite-refused';
+//            $('#new-game-form').attr('action', new_action);
+//            //alert(new_action);
+//            $('#new-game-form').submit();
+//        });
     </script>
 @endsection
