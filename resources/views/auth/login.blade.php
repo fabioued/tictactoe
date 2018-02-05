@@ -3,6 +3,14 @@
 @section('content')
 <div class="login container">
     <div class="row">
+        <div class="col-md-12">
+            <p class="text-center" style="font-size: 25px;font-weight: bold">
+                A tic-tac-toe game in laravel.
+                <br> It's a 2 player game. Each player have to create an account and then invite his friend to play.
+                <br>For testing purpose, you can open 2 different browsers, create an account and login then invite to play.
+                <br>And Voila!!! Let's have fun !!!!!
+            </p>
+        </div>
         <div class="col-md-8 col-md-offset-2">
             <div class="login panel panel-default">
                 <div class="panel-heading">Login</div>
